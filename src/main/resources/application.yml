@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: kafka-consumer
+
+  kafka:
+    consumer:
+      bootstrap-server: localhost:9092
+      group-id: group1
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    topic:
+      name: realtime_data
